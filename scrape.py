@@ -19,6 +19,22 @@ URL2 = "https://disboard.org/servers/tag/" + tag + "/2"
 URL3 = "https://disboard.org/servers/tag/" + tag + "/3"
 URL4 = "https://disboard.org/servers/tag/" + tag + "/4"
 URL5 = "https://disboard.org/servers/tag/" + tag + "/5"
+URL6 = "https://disboard.org/servers/tag/" + tag + "/6"
+URL7 = "https://disboard.org/servers/tag/" + tag + "/7"
+URL8 = "https://disboard.org/servers/tag/" + tag + "/8"
+URL9 = "https://disboard.org/servers/tag/" + tag + "/9"
+URL10 = "https://disboard.org/servers/tag/" + tag + "/10"
+URL11 = "https://disboard.org/servers/tag/" + tag + "/11"
+URL12 = "https://disboard.org/servers/tag/" + tag + "/12"
+URL13 = "https://disboard.org/servers/tag/" + tag + "/13"
+URL14 = "https://disboard.org/servers/tag/" + tag + "/14"
+URL15 = "https://disboard.org/servers/tag/" + tag + "/15"
+URL16 = "https://disboard.org/servers/tag/" + tag + "/16"
+URL17 = "https://disboard.org/servers/tag/" + tag + "/17"
+URL18 = "https://disboard.org/servers/tag/" + tag + "/18"
+URL19 = "https://disboard.org/servers/tag/" + tag + "/19"
+URL20 = "https://disboard.org/servers/tag/" + tag + "/20"
+URL21 = "https://disboard.org/servers/tag/" + tag + "/21"
 print("Scraping.")
 usr_agents = [ 
 "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)",
@@ -142,12 +158,45 @@ response2 = requests.get(URL2, headers=headers)
 response3 = requests.get(URL3, headers=headers)
 response4 = requests.get(URL4, headers=headers)
 response5 = requests.get(URL5, headers=headers)
+response6 = requests.get(URL6, headers=headers)
+response7 = requests.get(URL7, headers=headers)
+response8 = requests.get(URL8, headers=headers)
+response9 = requests.get(URL9, headers=headers)
+response10 = requests.get(URL10, headers=headers)
+response11 = requests.get(URL11, headers=headers)
+response12 = requests.get(URL12, headers=headers)
+response13 = requests.get(URL13, headers=headers)
+response14 = requests.get(URL14, headers=headers)
+response15 = requests.get(URL15, headers=headers)
+response16 = requests.get(URL16, headers=headers)
+response17 = requests.get(URL17, headers=headers)
+response18 = requests.get(URL18, headers=headers)
+response19 = requests.get(URL19, headers=headers)
+response20 = requests.get(URL20, headers=headers)
+response21 = requests.get(URL21, headers=headers)
+
 print("Scraping...")
 soup = BeautifulSoup(response.text, 'html.parser')
 soup2 = BeautifulSoup(response2.text, 'html.parser')
 soup3 = BeautifulSoup(response3.text, 'html.parser')
 soup4 = BeautifulSoup(response4.text, 'html.parser')
 soup5 = BeautifulSoup(response5.text, 'html.parser')
+soup6 = BeautifulSoup(response6.text, 'html.parser')
+soup7 = BeautifulSoup(response7.text, 'html.parser')
+soup8 = BeautifulSoup(response8.text, 'html.parser')
+soup9 = BeautifulSoup(response9.text, 'html.parser')
+soup10 = BeautifulSoup(response10.text, 'html.parser')
+soup11 = BeautifulSoup(response11.text, 'html.parser')
+soup12 = BeautifulSoup(response12.text, 'html.parser')
+soup13 = BeautifulSoup(response13.text, 'html.parser')
+soup14 = BeautifulSoup(response14.text, 'html.parser')
+soup15 = BeautifulSoup(response15.text, 'html.parser')
+soup16 = BeautifulSoup(response16.text, 'html.parser')
+soup17 = BeautifulSoup(response17.text, 'html.parser')
+soup18 = BeautifulSoup(response18.text, 'html.parser')
+soup19 = BeautifulSoup(response19.text, 'html.parser')
+soup20 = BeautifulSoup(response20.text, 'html.parser')
+soup21 = BeautifulSoup(response21.text, 'html.parser')
 print("Scraping....")
 
 buttons = soup.find_all(class_='button button-join is-discord')
@@ -155,8 +204,24 @@ buttons2 = soup2.find_all(class_='button button-join is-discord')
 buttons3 = soup3.find_all(class_='button button-join is-discord')
 buttons4 = soup4.find_all(class_='button button-join is-discord')
 buttons5 = soup5.find_all(class_='button button-join is-discord')
+buttons6 = soup6.find_all(class_='button button-join is-discord')
+buttons7 = soup7.find_all(class_='button button-join is-discord')
+buttons8 = soup8.find_all(class_='button button-join is-discord')
+buttons9 = soup9.find_all(class_='button button-join is-discord')
+buttons10 = soup10.find_all(class_='button button-join is-discord')
+buttons11 = soup11.find_all(class_='button button-join is-discord')
+buttons12 = soup12.find_all(class_='button button-join is-discord')
+buttons13 = soup13.find_all(class_='button button-join is-discord')
+buttons14 = soup14.find_all(class_='button button-join is-discord')
+buttons15 = soup15.find_all(class_='button button-join is-discord')
+buttons16 = soup16.find_all(class_='button button-join is-discord')
+buttons17 = soup17.find_all(class_='button button-join is-discord')
+buttons18 = soup18.find_all(class_='button button-join is-discord')
+buttons19 = soup19.find_all(class_='button button-join is-discord')
+buttons20 = soup20.find_all(class_='button button-join is-discord')
+buttons21 = soup21.find_all(class_='button button-join is-discord')
 print("Scraping.......")
-file = open('invites.txt', 'a')
+file = open('invites.txt', 'w')
 
 for button in buttons:
     file.write("\nhttps://disboard.org" + button['href'])
@@ -167,5 +232,37 @@ for button in buttons3:
 for button in buttons4:
     file.write("\nhttps://disboard.org" + button['href'])    
 for button in buttons5:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons6:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons7:
+    file.write("\nhttps://disboard.org" + button['href'])    
+for button in buttons8:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons9:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons10:
+    file.write("\nhttps://disboard.org" + button['href'])    
+for button in buttons11:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons12:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons13:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons14:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons15:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons16:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons17:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons18:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons19:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons20:
+    file.write("\nhttps://disboard.org" + button['href'])
+for button in buttons21:
     file.write("\nhttps://disboard.org" + button['href'])
 print("Succesfully Scraped & Wrote all of the Invites to invites.txt")
